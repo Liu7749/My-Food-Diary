@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的日记本</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>我的日记本</h1>
+            <button id="addEntryBtn" class="btn">写新日记</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- 搜索栏 -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="搜索日记...">
+                <button id="searchBtn">搜索</button>
+            </div>
+
+            <!-- 日记列表 -->
+            <div id="entriesContainer" class="entries-container">
+                <!-- 日记条目将通过 JavaScript 动态添加 -->
+            </div>
+
+            <!-- 日记编辑表单 -->
+            <div id="entryForm" class="entry-form hidden">
+                <h2>写日记</h2>
+                <input type="hidden" id="entryId">
+                <div class="form-group">
+                    <label for="entryDate">日期</label>
+                    <input type="date" id="entryDate">
+                </div>
+                <div class="form-group">
+                    <label for="entryTitle">标题</label>
+                    <input type="text" id="entryTitle" placeholder="日记标题">
+                </div>
+                <div class="form-group">
+                    <label for="entryContent">内容</label>
+                    <textarea id="entryContent" rows="10" placeholder="今天有什么想记录的..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button id="saveEntryBtn" class="btn">保存</button>
+                    <button id="cancelBtn" class="btn secondary">取消</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 我的日记本 | 记录生活中的美好时刻</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
